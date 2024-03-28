@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/react-shablot-template">
+  <BrowserRouter basename="/glow-frame-studio">
     <App />
   </BrowserRouter>
 );
