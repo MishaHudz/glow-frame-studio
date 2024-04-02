@@ -1,7 +1,13 @@
-import { Link } from 'react-router-dom';
+import BenefitsSection from 'components/BenefitsSection/BenefitsSection';
+import ExampleSection from 'components/ExampleSection/ExampleSection';
 
 function HomePage() {
-  return <Link to="/order-litophanes">Order</Link>;
+  return (
+    <>
+      <BenefitsSection />
+      <ExampleSection />
+    </>
+  );
 }
 
 export default HomePage;
