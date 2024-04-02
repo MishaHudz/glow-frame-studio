@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/glow-frame-studio/static/css/main.7acaea2f.css",
-    "main.js": "/glow-frame-studio/static/js/main.13779545.js",
+    "main.css": "/glow-frame-studio/static/css/main.0d7072f6.css",
+    "main.js": "/glow-frame-studio/static/js/main.409a3bb1.js",
+    "static/media/photo.jpg": "/glow-frame-studio/static/media/photo.5d7661debf05a8e438f5.jpg",
+    "static/media/tach.jpg": "/glow-frame-studio/static/media/tach.aa990a3fcd06922f1a3a.jpg",
+    "static/media/glass.jpg": "/glow-frame-studio/static/media/glass.b62fb006460280b0189d.jpg",
+    "static/media/connector.jpg": "/glow-frame-studio/static/media/connector.accdde7f174b4ef0ea78.jpg",
+    "static/media/light.jpg": "/glow-frame-studio/static/media/light.822eea57eca6c5691f41.jpg",
+    "static/media/ex1_light.jpg": "/glow-frame-studio/static/media/ex1_light.29bb7353a570540c73f1.jpg",
+    "static/media/Logo_Orange.png": "/glow-frame-studio/static/media/Logo_Orange.51ba5fb910a788199646.png",
+    "static/media/ex1_night.jpg": "/glow-frame-studio/static/media/ex1_night.2cf8c03bb42e4e1136b0.jpg",
     "index.html": "/glow-frame-studio/index.html",
-    "main.7acaea2f.css.map": "/glow-frame-studio/static/css/main.7acaea2f.css.map",
-    "main.13779545.js.map": "/glow-frame-studio/static/js/main.13779545.js.map"
+    "static/media/sprite.svg": "/glow-frame-studio/static/media/sprite.b416cf788a44b673a9626e391ba620e1.svg",
+    "main.0d7072f6.css.map": "/glow-frame-studio/static/css/main.0d7072f6.css.map",
+    "main.409a3bb1.js.map": "/glow-frame-studio/static/js/main.409a3bb1.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.13779545.js"
+    "static/css/main.0d7072f6.css",
+    "static/js/main.409a3bb1.js"
   ]
 }
