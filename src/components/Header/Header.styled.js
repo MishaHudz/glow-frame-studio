@@ -17,6 +17,12 @@ export const HeadContainer = styled.div`
   width: 80%;
 `;
 
+export const HeadRightContainer = styled.div`
+  display: flex;
+
+  gap: 60px;
+`;
+
 export const HeadNavigationList = styled.ul`
   display: flex;
   align-items: center;

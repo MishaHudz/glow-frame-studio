@@ -5,35 +5,41 @@ import BenefitsGlass from '../../assets/images/benefits/glass.jpg';
 import BenefitsTach from '../../assets/images/benefits/tach.jpg';
 import BenefitsConnector from '../../assets/images/benefits/connector.jpg';
 import BenefitsLight from '../../assets/images/benefits/light.jpg';
-const Benefits = [
-  {
-    image: BenefitsPhoto,
-    description:
-      "Фотографія розміром 13/13 см: Такий розмір дозволяє побачити всі деталі ваших найкращих життєвих моментів. Завдяки цьому компактному розміру ви можете легко розмістити рамку літофанії в будь-якому місці вашого дому чи офісу, і вона буде прекрасним прикрасою для вашого інтер'єру. Великий розмір фотографії також дозволяє вам відтворити кожну деталь і вираз на знімку, роблячи ваші спогади більш живими та реалістичними.",
-  },
-  {
-    image: BenefitsGlass,
-    description:
-      "Фотографія розміром 13/13 см: Такий розмір дозволяє побачити всі деталі ваших найкращих життєвих моментів. Завдяки цьому компактному розміру ви можете легко розмістити рамку літофанії в будь-якому місці вашого дому чи офісу, і вона буде прекрасним прикрасою для вашого інтер'єру. Великий розмір фотографії також дозволяє вам відтворити кожну деталь і вираз на знімку, роблячи ваші спогади більш живими та реалістичними.",
-  },
-  {
-    image: BenefitsTach,
-    description:
-      "Фотографія розміром 13/13 см: Такий розмір дозволяє побачити всі деталі ваших найкращих життєвих моментів. Завдяки цьому компактному розміру ви можете легко розмістити рамку літофанії в будь-якому місці вашого дому чи офісу, і вона буде прекрасним прикрасою для вашого інтер'єру. Великий розмір фотографії також дозволяє вам відтворити кожну деталь і вираз на знімку, роблячи ваші спогади більш живими та реалістичними.",
-  },
-  {
-    image: BenefitsConnector,
-    description:
-      "Фотографія розміром 13/13 см: Такий розмір дозволяє побачити всі деталі ваших найкращих життєвих моментів. Завдяки цьому компактному розміру ви можете легко розмістити рамку літофанії в будь-якому місці вашого дому чи офісу, і вона буде прекрасним прикрасою для вашого інтер'єру. Великий розмір фотографії також дозволяє вам відтворити кожну деталь і вираз на знімку, роблячи ваші спогади більш живими та реалістичними.",
-  },
-  {
-    image: BenefitsLight,
-    description:
-      "Фотографія розміром 13/13 см: Такий розмір дозволяє побачити всі деталі ваших найкращих життєвих моментів. Завдяки цьому компактному розміру ви можете легко розмістити рамку літофанії в будь-якому місці вашого дому чи офісу, і вона буде прекрасним прикрасою для вашого інтер'єру. Великий розмір фотографії також дозволяє вам відтворити кожну деталь і вираз на знімку, роблячи ваші спогади більш живими та реалістичними.",
-  },
-];
+import { useContext } from 'react';
+import { MyContext } from 'сontext/context';
+import { languageSelect } from 'helpers/languageSelect';
 
 function BenefitsList() {
+  const { isEnglish } = useContext(MyContext);
+
+  const Benefits = [
+    {
+      image: BenefitsPhoto,
+      title: languageSelect(isEnglish).BenefitsSection.benefit1Title,
+      description: languageSelect(isEnglish).BenefitsSection.benefit1,
+    },
+    {
+      image: BenefitsGlass,
+      title: languageSelect(isEnglish).BenefitsSection.benefit2Title,
+      description: languageSelect(isEnglish).BenefitsSection.benefit2,
+    },
+    {
+      image: BenefitsTach,
+      title: languageSelect(isEnglish).BenefitsSection.benefit3Title,
+      description: languageSelect(isEnglish).BenefitsSection.benefit3,
+    },
+    {
+      image: BenefitsConnector,
+      title: languageSelect(isEnglish).BenefitsSection.benefit4Title,
+      description: languageSelect(isEnglish).BenefitsSection.benefit4,
+    },
+    {
+      image: BenefitsLight,
+      title: languageSelect(isEnglish).BenefitsSection.benefit5Title,
+      description: languageSelect(isEnglish).BenefitsSection.benefit5,
+    },
+  ];
+
   return (
     <ul>
       {Benefits.map((benefit, i) => (

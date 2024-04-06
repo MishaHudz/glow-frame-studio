@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ExampleSect = styled.section`
+export const HeroSect = styled.section`
   display: flex;
   justify-content: center;
 

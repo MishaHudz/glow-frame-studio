@@ -34,5 +34,14 @@ export const BenefitsListItemImage = styled.img`
 `;
 
 export const BenefitsListItemParagraph = styled.p`
+  width: 100%;
+`;
+
+export const ItemDescriptionContainer = styled.div`
   width: 60%;
+`;
+
+export const ItemDescriptionTitle = styled.h3`
+  font-size: 22px;
+  margin-bottom: 15px;
 `;
