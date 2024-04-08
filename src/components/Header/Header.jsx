@@ -1,47 +1,47 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   Head,
   HeadContainer,
-  HeadNavigationList,
   HeadRightContainer,
+  HeaderMainIcon,
 } from './Header.styled';
-
+import { useMediaQuery } from 'react-responsive';
 import LogoOrange from '../../assets/images/Logo_Orange.png';
 import LanguageSelect from 'components/LanguageSelect/LanguageSelect';
-import { useContext } from 'react';
-import { MyContext } from 'сontext/context';
-import { languageSelect } from 'helpers/languageSelect';
+import { useState } from 'react';
+import MobileMenuModal from 'components/Modal/MobileMenuModal/MobileMenuModal';
+import BurgerButton from 'components/BurgerButton/BurgerButton';
+import NavigationList from 'components/NavigationList/NavigationList';
 
 function Header() {
-  const { isEnglish } = useContext(MyContext);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isTabletScreen = useMediaQuery({ minWidth: 768 });
 
   return (
     <>
       <Head>
         <HeadContainer>
           <Link to="/">
-            <img src={LogoOrange} alt="logo" width="100px" height="100px" />
+            <HeaderMainIcon
+              src={LogoOrange}
+              alt="logo"
+              width="100px"
+              height="100px"
+            />
           </Link>
 
           <HeadRightContainer>
-            <HeadNavigationList>
-              <li>
-                <NavLink to="/">
-                  {languageSelect(isEnglish).HeaderNavigation.home}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/order-litophanes">
-                  {languageSelect(isEnglish).HeaderNavigation.order}
-                </NavLink>
-              </li>
-              <li>
-                <a href="#contacts">
-                  {languageSelect(isEnglish).HeaderNavigation.contact}
-                </a>
-              </li>
-            </HeadNavigationList>
+            {!isTabletScreen && (
+              <BurgerButton setMobileMenuOpen={setMobileMenuOpen} />
+            )}
 
+            <MobileMenuModal
+              mobileMenuOpen={mobileMenuOpen}
+              setMobileMenuOpen={setMobileMenuOpen}
+            />
+            {isTabletScreen && (
+              <NavigationList setMobileMenuOpen={setMobileMenuOpen} />
+            )}
             <LanguageSelect />
           </HeadRightContainer>
         </HeadContainer>

@@ -7,13 +7,13 @@ export const engTranslate = {
   FAQSection: {
     question1: 'Does the frame have a battery or does it work autonomously?',
     answer1:
-      'Unfortunately, the frame is not equipped with batteries and can only operate from an external power source!',
+      'Unfortunately, the frame is not equipped with batteries and can only operate from an external power source.',
     question2: 'Is it possible to work from a power bank?',
     answer2:
-      'Yes, it is possible to power from a power bank via the Type-C connector!',
+      'Yes, it is possible to power from a power bank via the Type-C connector.',
     question3: 'Can I change the photo in the frame?',
     answer3:
-      'This function is not provided, the photo is embedded and cannot be replaced!',
+      'This function is not provided, the photo is embedded and cannot be replaced.',
   },
   BenefitsSection: {
     title: 'Benefits',
@@ -35,6 +35,6 @@ export const engTranslate = {
   },
 
   MadeSection: {
-    title: 'Frames are made',
+    title: 'Sample frames',
   },
 };

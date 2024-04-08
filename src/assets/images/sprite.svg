@@ -14,6 +14,13 @@
       <path d="M0 16c0 8.837 7.163 16 16 16s16-7.163 16-16S24.837 0 16 0 0 7.163 0 16zm29 0c0 7.18-5.82 13-13 13S3 23.18 3 16 8.82 3 16 3s13 5.82 13 13z"/>
       <path d="m22.086 20.914 2.829-2.829-8.914-8.914-8.914 8.914 2.828 2.828 6.086-6.086z"/>
     </symbol>
+       
+      <symbol id="burger-menu" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24">
+        <path d="M3 12h18M3 6h18M3 18h18"/>
+    </symbol>
+      <symbol id="close-icon" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </symbol>
 
       <symbol id="ukr">
        <path fill="#2455b2" d="M31 8a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v9h30V8Z"/>

@@ -18,6 +18,12 @@ export const QuestionButton = styled.button`
   right: 30px;
 
   transform: translateY(-50%);
+  transition: scale 250ms linear;
+
+  &:hover,
+  &:focus {
+    scale: 1.1;
+  }
 `;
 
 export const QuestionButtonSvgDown = styled.svg`
@@ -29,11 +35,13 @@ export const QuestionButtonSvgUp = styled.svg`
 `;
 
 export const Question = styled.p`
+  font-weight: 600;
+
   width: 90%;
 `;
 
 export const Answer = styled.p`
   width: 90%;
-
+  color: rgba(255, 255, 255, 0.6);
   margin-top: 15px;
 `;
