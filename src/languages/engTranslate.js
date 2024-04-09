@@ -37,4 +37,14 @@ export const engTranslate = {
   MadeSection: {
     title: 'Sample frames',
   },
+  ContactSection: {
+    title: 'Contacts',
+    addressTitle: 'Visit us',
+    addressDescription: 'Evaluate the framework with your own eyes',
+    addressLink: 's. Morshyn, Ivan Franko Street',
+    tellTitle: 'Call us',
+    tellDescription: 'Ask, clarify your questions',
+    mailTitle: 'Massage us',
+    mailDescription: 'Write to contact us',
+  },
 };

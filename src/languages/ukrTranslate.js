@@ -35,4 +35,14 @@ export const ukrTranslate = {
   MadeSection: {
     title: 'Виготовлені рамки',
   },
+  ContactSection: {
+    title: 'Контакти',
+    addressTitle: 'Відвідайте нас',
+    addressDescription: 'На власні очі оцініть рамки',
+    addressLink: 'м. Моршин, вул Івана-Франка',
+    tellTitle: 'Подзвоніть нам',
+    tellDescription: 'Запитайте, уточніть ваші питання',
+    mailTitle: 'Напишіть нам',
+    mailDescription: "Напишіть щоб зв'язатися з нами",
+  },
 };

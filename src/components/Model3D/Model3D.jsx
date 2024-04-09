@@ -4,7 +4,7 @@ import Model from 'components/Shoe';
 
 function Model3D() {
   return (
-    <div style={{ width: '700px', height: '700px' }}>
+    <div style={{ width: '100%', height: '700px' }}>
       <Suspense fallback={<div>Loading</div>}>
         <Canvas>
           <ambientLight intensity={0.4} />

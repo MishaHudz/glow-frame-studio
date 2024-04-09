@@ -8,6 +8,7 @@ import BenefitsLight from '../../assets/images/benefits/light.jpg';
 import { useContext } from 'react';
 import { MyContext } from 'сontext/context';
 import { languageSelect } from 'helpers/languageSelect';
+import { BenefitsLst } from './BenefitsList.styled';
 
 function BenefitsList() {
   const { isEnglish } = useContext(MyContext);
@@ -41,11 +42,11 @@ function BenefitsList() {
   ];
 
   return (
-    <ul>
+    <BenefitsLst>
       {Benefits.map((benefit, i) => (
         <BenefitsListItem key={i} benefit={benefit} />
       ))}
-    </ul>
+    </BenefitsLst>
   );
 }
 

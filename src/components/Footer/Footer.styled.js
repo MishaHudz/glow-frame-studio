@@ -10,7 +10,25 @@ export const Foot = styled.footer`
 
 export const FooterContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-
   width: 80%;
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1440px) {
+  }
+`;
+
+export const FootCopyright = styled.p`
+  text-align: center;
+  font-size: 12px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 16px;
+  }
 `;

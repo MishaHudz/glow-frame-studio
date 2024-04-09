@@ -37,8 +37,13 @@ export const HeaderMainIcon = styled.img`
 export const HeadContainer = styled.div`
   display: flex;
   justify-content: space-between;
-
   width: 80%;
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1440px) {
+    width: 80%;
+  }
 `;
 
 export const HeadRightContainer = styled.div`

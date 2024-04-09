@@ -38,7 +38,7 @@ function ImageCarousel() {
       {isDesktopScreen && <ReviewsSwiperCustomButtons />}
 
       <ImageCarouselContainer
-        spaceBetween={0}
+        spaceBetween={10}
         slidesPerView={1}
         modules={[Scrollbar, Navigation]}
         scrollbar={{ draggable: true }}

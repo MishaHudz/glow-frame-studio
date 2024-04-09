@@ -1,9 +1,13 @@
-import { Foot, FooterContainer } from './Footer.styled';
+import MediaList from 'components/MediaList/MediaList';
+import { Foot, FootCopyright, FooterContainer } from './Footer.styled';
 
 function Footer() {
   return (
     <Foot>
-      <FooterContainer>test</FooterContainer>
+      <FooterContainer>
+        <MediaList />
+        <FootCopyright>&#169;Copyright. All rights reserved.</FootCopyright>
+      </FooterContainer>
     </Foot>
   );
 }

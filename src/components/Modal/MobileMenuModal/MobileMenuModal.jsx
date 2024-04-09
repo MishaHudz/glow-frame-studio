@@ -10,6 +10,7 @@ import {
 const customStyles = {
   overlay: {
     background: 'rgba(5, 5, 5, 0.8)',
+    zIndex: '3',
   },
 };
 
@@ -32,7 +33,7 @@ const MobileMenuModal = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <use xlinkHref={`${sprite}#close-icon`} />
         </MobileModalCloseBtnIcon>
       </MobileModalCloseBtn>
-      <NavigationList />
+      <NavigationList onCloseButtonClick={onCloseButtonClick} />
     </MobileModal>
   );
 };

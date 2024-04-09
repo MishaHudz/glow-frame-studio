@@ -18,8 +18,8 @@ export const ImageCarouselWrapper = styled.div`
 `;
 
 export const ImageCarouselSlideContainer = styled(SwiperSlide)`
-  width: 327px;
-  min-height: 263px;
+  width: 100%;
+  margin-bottom: 20px;
   padding-bottom: 24px;
 
   @media (min-width: 768px) {
@@ -35,13 +35,13 @@ export const ImageCarouselSlideContainer = styled(SwiperSlide)`
 
 export const ImageCarouselContainer = styled(Swiper)`
   position: relative;
-  width: 327px;
+  width: 90%;
   overflow: hidden;
   margin-bottom: 24px;
 
   .swiper-scrollbar {
     background-color: #000;
-    width: 327px;
+    width: 100%;
     height: 2px;
   }
 
@@ -53,13 +53,6 @@ export const ImageCarouselContainer = styled(Swiper)`
 
   .swiper-scrollbar-drag:not(:last-child) {
     display: none;
-  }
-  @media (min-width: 768px) {
-    width: 656px;
-
-    .swiper-scrollbar {
-      width: 656px;
-    }
   }
 
   @media (min-width: 1440px) {
