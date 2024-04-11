@@ -39,9 +39,7 @@ function Header() {
               mobileMenuOpen={mobileMenuOpen}
               setMobileMenuOpen={setMobileMenuOpen}
             />
-            {isTabletScreen && (
-              <NavigationList setMobileMenuOpen={setMobileMenuOpen} />
-            )}
+            {isTabletScreen && <NavigationList />}
             <LanguageSelect />
           </HeadRightContainer>
         </HeadContainer>

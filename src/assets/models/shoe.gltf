@@ -693,7 +693,7 @@
   "buffers": [
     {
       "byteLength": 619472,
-      "uri": "shoe.bin"
+      "uri": "./shoe.bin"
     }
   ]
 }

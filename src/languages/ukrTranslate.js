@@ -45,4 +45,26 @@ export const ukrTranslate = {
     mailTitle: 'Напишіть нам',
     mailDescription: "Напишіть щоб зв'язатися з нами",
   },
+
+  FormSection: {
+    title: 'Оформити замовлення',
+    firstLegend: {
+      title: 'Персональна інформація',
+      name: "Ім'я",
+      surname: 'Прізвище',
+    },
+    secondLegend: {
+      title: 'Контактна інформація',
+      email: 'Електронна адреса',
+      tell: 'Телефон',
+    },
+    thirdLegend: {
+      title: 'Адресна інформація',
+      post1: 'Нова Пошта',
+      post2: 'УкрПошта',
+      settlement: 'Населений пункт',
+      department: 'Відділення',
+    },
+    orderBtn: 'Замовити',
+  },
 };

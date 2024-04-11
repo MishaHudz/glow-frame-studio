@@ -1,5 +1,7 @@
+import OrderFormSection from 'components/OrderFormSection/OrderFormSection';
+
 function Page() {
-  return <h2>Page</h2>;
+  return <OrderFormSection />;
 }
 
 export default Page;

@@ -47,4 +47,26 @@ export const engTranslate = {
     mailTitle: 'Massage us',
     mailDescription: 'Write to contact us',
   },
+
+  FormSection: {
+    title: 'Order now',
+    firstLegend: {
+      title: 'Personal information',
+      name: 'Name',
+      surname: 'Surname',
+    },
+    secondLegend: {
+      title: 'Contact information',
+      email: 'Email Address',
+      tell: 'Telephone',
+    },
+    thirdLegend: {
+      title: 'Address information',
+      post1: 'Nova Poshta',
+      post2: 'Ukrposhta',
+      settlement: 'City',
+      department: 'Post office',
+    },
+    orderBtn: 'Order',
+  },
 };

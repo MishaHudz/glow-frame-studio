@@ -5,7 +5,7 @@ import { MyContext } from 'сontext/context';
 import { languageSelect } from 'helpers/languageSelect';
 import { HeadNavigationList } from './NavigationList.styled';
 
-function NavigationList({ onCloseButtonClick }) {
+function NavigationList({ onCloseButtonClick = () => {} }) {
   const { isEnglish } = useContext(MyContext);
 
   const navigate = useNavigate();
