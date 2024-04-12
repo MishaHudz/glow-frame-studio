@@ -67,6 +67,9 @@ export const engTranslate = {
       settlement: 'City',
       department: 'Post office',
     },
+    fourthLegend: {
+      title: 'Select an image',
+    },
     orderBtn: 'Order',
   },
 };

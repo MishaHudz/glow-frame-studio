@@ -65,6 +65,9 @@ export const ukrTranslate = {
       settlement: 'Населений пункт',
       department: 'Відділення',
     },
+    fourthLegend: {
+      title: 'Вибір зображення',
+    },
     orderBtn: 'Замовити',
   },
 };

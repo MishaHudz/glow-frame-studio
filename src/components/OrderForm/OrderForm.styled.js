@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const OrderFrm = styled.form`
   display: flex;
@@ -26,6 +36,77 @@ export const OrderFrmInput = styled.input`
     border-color: #cb1134;
   }
 `;
+
+//  file input
+export const OrderFrmFileInput = styled.input`
+  display: none;
+`;
+
+export const OrderFrmFileLabel = styled.label`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 3px solid #fff;
+  border-radius: 10px;
+
+  transition: all 150ms linear;
+
+  &:hover,
+  &:focus {
+    border-color: #fb6514;
+  }
+
+  &:hover svg.reload,
+  &:focus svg.reload {
+    animation: ${rotate360} 2s infinite linear;
+  }
+
+  &:hover svg.add,
+  &:focus svg.add {
+    scale: 1.1;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #fb6514;
+  }
+
+  @media (min-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+  }
+`;
+
+export const OrderFrmFileLabelIcon = styled.svg`
+  fill: #fff;
+  width: 15px;
+  transition: all 150ms linear;
+
+  @media (min-width: 768px) {
+    width: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 32px;
+  }
+`;
+
+//
 
 export const OrderFrmFieldset = styled.fieldset`
   width: 80%;

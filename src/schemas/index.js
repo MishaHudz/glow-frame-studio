@@ -30,7 +30,7 @@ export const basicSchema = yup.object().shape({
     .string()
     .matches(/^[a-zA-Zа-яА-Я]+$/, 'Settlement must contain only letters')
     .min(2, 'Settlement must be at least 2 characters')
-    .required('Please enter your settlement'),
+    .required('Please enter your city'),
 
   company: yup.string().required(),
 
@@ -40,4 +40,14 @@ export const basicSchema = yup.object().shape({
     .min(1, 'Department must be greater than or equal to 1')
     .max(5000, 'Department must be less than or equal to 5000')
     .required('Please enter your department'),
+
+  image: yup
+    .mixed()
+    .required('Please select the image')
+    .test('FILE_SIZE', 'Too big!', value => value && value.size < 2000 * 10000)
+    .test(
+      'TYPE',
+      'Invalid format!',
+      value => value && ['image/png', 'image/jpeg'].includes(value.type)
+    ),
 });

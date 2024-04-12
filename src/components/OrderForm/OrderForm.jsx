@@ -4,6 +4,9 @@ import {
   OrderBtn,
   OrderFrm,
   OrderFrmFieldset,
+  OrderFrmFileInput,
+  OrderFrmFileLabel,
+  OrderFrmFileLabelIcon,
   OrderFrmInput,
   OrderFrmLabel,
   OrderFrmLegend,
@@ -14,6 +17,8 @@ import InputMask from 'react-input-mask';
 import { useContext } from 'react';
 import { MyContext } from 'сontext/context';
 import { languageSelect } from 'helpers/languageSelect';
+import PreviewImage from 'components/PreviewImage/PreviewImage';
+import sprite from '../../assets/images/sprite.svg';
 
 function OrderForm() {
   const { isEnglish } = useContext(MyContext);
@@ -23,20 +28,28 @@ function OrderForm() {
     resetForm();
   };
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: {
-        name: '',
-        surname: '',
-        email: '',
-        tell: '',
-        settlement: '',
-        department: '',
-        company: 'novaPoshta',
-      },
-      validationSchema: basicSchema,
-      onSubmit: onFormSubmit,
-    });
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setFieldValue,
+  } = useFormik({
+    initialValues: {
+      name: '',
+      surname: '',
+      email: '',
+      tell: '',
+      settlement: '',
+      department: '',
+      company: 'novaPoshta',
+      image: '',
+    },
+    validationSchema: basicSchema,
+    onSubmit: onFormSubmit,
+  });
   return (
     <OrderFrm onSubmit={handleSubmit}>
       <OrderFrmFieldset>
@@ -181,6 +194,40 @@ function OrderForm() {
           {errors.department && touched.department && (
             <ErrorMsg> {errors.department} </ErrorMsg>
           )}
+        </div>
+      </OrderFrmFieldset>
+
+      <OrderFrmFieldset>
+        <OrderFrmLegend>
+          {languageSelect(isEnglish).FormSection.fourthLegend.title}
+        </OrderFrmLegend>
+        <div>
+          <OrderFrmFileLabel htmlFor="file-select">
+            {!values.image && (
+              <OrderFrmFileLabelIcon className="add" width="32px" height="32px">
+                <use xlinkHref={`${sprite}#plus`} />
+              </OrderFrmFileLabelIcon>
+            )}
+            {values.image && (
+              <OrderFrmFileLabelIcon
+                className="reload"
+                width="32px"
+                height="32px"
+              >
+                <use xlinkHref={`${sprite}#reload`} />
+              </OrderFrmFileLabelIcon>
+            )}
+          </OrderFrmFileLabel>
+          <OrderFrmFileInput
+            id="file-select"
+            type="file"
+            name="image"
+            onChange={evt => setFieldValue('image', evt.target.files[0])}
+          />
+          {errors.image && touched.image && (
+            <ErrorMsg> {errors.image} </ErrorMsg>
+          )}
+          {values.image && <PreviewImage imageFile={values.image} />}
         </div>
       </OrderFrmFieldset>
 
