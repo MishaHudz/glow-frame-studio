@@ -1,4 +1,10 @@
 export const engTranslate = {
+  SectionHero: {
+    title: 'Hero',
+    description:
+      'Description description  description description description description description description description description description',
+    link: 'Order',
+  },
   HeaderNavigation: {
     home: 'Home',
     order: 'Order',

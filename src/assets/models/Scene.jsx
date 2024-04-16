@@ -1,17 +1,15 @@
-import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
-export default function Model(props) {
-  const { nodes, materials } = useGLTF('/scene.gltf');
+import ModelLink from '../../assets/models/test.glb';
+
+export default function Model() {
+  const { scene } = useGLTF(ModelLink);
   return (
-    <group {...props} dispose={null}>
-      <mesh
-        geometry={nodes.Object_4.geometry}
-        material={materials['Scene_-_Root']}
-        scale={1.128}
-      />
-    </group>
+    <primitive
+      object={scene}
+      position={[-1, -2.7, 0]}
+      rotation={[0, -Math.PI / 1.8, 0]}
+      scale={[35, 35, 35]}
+    />
   );
 }
-
-useGLTF.preload('/scene.gltf');
