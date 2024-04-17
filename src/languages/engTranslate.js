@@ -1,9 +1,9 @@
 export const engTranslate = {
   SectionHero: {
-    title: 'Hero',
+    title: '3D Frames from Glow Frame - the magic of your memories',
     description:
-      'Description description  description description description description description description description description description',
-    link: 'Order',
+      'Make a gift that will be remembered - choose a 3D Frame from Glow Frame! This wonderful frame will not only inspire and impress your friend or family, but will also be a great addition to their home decor. And also, it can serve as a night light, creating gentle and cozy lighting in the room. Make your important memories last forever with 3D Frames from Glow Frame!',
+    link: 'Order now',
   },
   HeaderNavigation: {
     home: 'Home',

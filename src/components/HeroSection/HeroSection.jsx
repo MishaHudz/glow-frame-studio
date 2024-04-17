@@ -1,4 +1,5 @@
 import { SectContainer } from 'components/BenefitsSection/BenefitsSection.styled';
+import { useMediaQuery } from 'react-responsive';
 import {
   HeroSect,
   HeroSectContentContainer,
@@ -14,23 +15,25 @@ import { MyContext } from 'сontext/context';
 
 function HeroSection() {
   const { isEnglish } = useContext(MyContext);
+  const isTabletScreen = useMediaQuery({ minWidth: 768 });
+
   return (
     <HeroSect>
       <SectContainer>
-        <SectionTitle title={languageSelect(isEnglish).SectionHero.title} />
-
         <HeroSectContentContainer>
           <HeroSectInfoContainer>
+            <SectionTitle title={languageSelect(isEnglish).SectionHero.title} />
+            {!isTabletScreen && <Model3D />}
+
             <HeroSectInfoParagraph>
               {languageSelect(isEnglish).SectionHero.description}
             </HeroSectInfoParagraph>
-
             <HeroSectInfoLink to="/order-litophanes">
               {languageSelect(isEnglish).SectionHero.link}
             </HeroSectInfoLink>
           </HeroSectInfoContainer>
 
-          <Model3D />
+          {isTabletScreen && <Model3D />}
         </HeroSectContentContainer>
       </SectContainer>
     </HeroSect>

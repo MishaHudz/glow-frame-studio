@@ -88,9 +88,12 @@ export const HeroSectInfoContainer = styled.div`
 
   @media (min-width: 768px) {
     width: 50%;
-    gap: 0px;
   }
 
   @media (min-width: 1440px) {
+  }
+
+  & h2 {
+    margin-bottom: 0px;
   }
 `;

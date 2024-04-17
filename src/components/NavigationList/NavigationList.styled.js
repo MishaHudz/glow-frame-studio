@@ -10,11 +10,11 @@ export const HeadNavigationList = styled.ul`
 
   @media (min-width: 768px) {
     height: auto;
-    gap: 20px;
+    gap: 40px;
     flex-direction: row;
   }
 
   @media (min-width: 1440px) {
-    gap: 40px;
+    gap: 60px;
   }
 `;
