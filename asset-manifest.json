@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/glow-frame-studio/static/css/main.0d7072f6.css",
-    "main.js": "/glow-frame-studio/static/js/main.afa09560.js",
+    "main.js": "/glow-frame-studio/static/js/main.c8ea592b.js",
     "static/media/Frame.glb": "/glow-frame-studio/static/media/Frame.4db6a6ae00b36fe0a6cb.glb",
     "static/media/photo.jpg": "/glow-frame-studio/static/media/photo.5d7661debf05a8e438f5.jpg",
     "static/media/tach.jpg": "/glow-frame-studio/static/media/tach.aa990a3fcd06922f1a3a.jpg",
@@ -14,10 +14,10 @@
     "static/media/sprite.svg": "/glow-frame-studio/static/media/sprite.8528de7dc4fd6aab916269ae5f7594da.svg",
     "index.html": "/glow-frame-studio/index.html",
     "main.0d7072f6.css.map": "/glow-frame-studio/static/css/main.0d7072f6.css.map",
-    "main.afa09560.js.map": "/glow-frame-studio/static/js/main.afa09560.js.map"
+    "main.c8ea592b.js.map": "/glow-frame-studio/static/js/main.c8ea592b.js.map"
   },
   "entrypoints": [
     "static/css/main.0d7072f6.css",
-    "static/js/main.afa09560.js"
+    "static/js/main.c8ea592b.js"
   ]
 }
