@@ -99,6 +99,7 @@ export const Question = styled.p`
   font-weight: 600;
   font-size: 12px;
   width: 85%;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     font-size: 14px;

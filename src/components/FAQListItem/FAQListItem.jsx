@@ -21,7 +21,7 @@ function FAQListItem({ question, answer }) {
   return (
     <FAQItem>
       <QuestionContainer>
-        <Question>{question}</Question>
+        <Question onClick={onShowBtnClick}>{question}</Question>
         <QuestionButton onClick={onShowBtnClick}>
           {!isShow && (
             <QuestionButtonSvgDown width="32px" height="32px">
