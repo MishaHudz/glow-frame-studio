@@ -1,6 +1,5 @@
 import { languageSelect } from 'helpers/languageSelect';
-import { useContext } from 'react';
-import { MyContext } from 'сontext/context';
+import { useSelector } from 'react-redux';
 import sprite from '../../assets/images/sprite.svg';
 import {
   ContactLst,
@@ -12,7 +11,8 @@ import {
 } from './ContactList.styled';
 
 function ContactList() {
-  const { isEnglish } = useContext(MyContext);
+  const isEnglish = useSelector(state => state.language.isEnglish);
+
   return (
     <ContactLst>
       <ContactLstItem>

@@ -1,13 +1,12 @@
+import { useSelector } from 'react-redux';
 import ImageCarousel from 'components/ImageCarousel/ImageCarousel';
 import { ExampleSect } from './ExampleSection.styled';
 import { SectContainer } from 'components/BenefitsSection/BenefitsSection.styled';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
-import { useContext } from 'react';
-import { MyContext } from 'сontext/context';
 import { languageSelect } from 'helpers/languageSelect';
 
 function ExampleSection() {
-  const { isEnglish } = useContext(MyContext);
+  const isEnglish = useSelector(state => state.language.isEnglish);
   return (
     <ExampleSect>
       <SectContainer>

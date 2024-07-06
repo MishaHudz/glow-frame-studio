@@ -5,13 +5,12 @@ import BenefitsGlass from '../../assets/images/benefits/glass.jpg';
 import BenefitsTach from '../../assets/images/benefits/tach.jpg';
 import BenefitsConnector from '../../assets/images/benefits/connector.jpg';
 import BenefitsLight from '../../assets/images/benefits/light.jpg';
-import { useContext } from 'react';
-import { MyContext } from 'сontext/context';
 import { languageSelect } from 'helpers/languageSelect';
 import { BenefitsLst } from './BenefitsList.styled';
+import { useSelector } from 'react-redux';
 
 function BenefitsList() {
-  const { isEnglish } = useContext(MyContext);
+  const isEnglish = useSelector(state => state.language.isEnglish);
 
   const Benefits = [
     {

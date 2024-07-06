@@ -8,7 +8,6 @@ export default function Model({ setIsLoading }) {
 
   useEffect(() => {
     setIsLoading(false);
-    console.log(15);
   }, [setIsLoading]);
   return (
     <primitive

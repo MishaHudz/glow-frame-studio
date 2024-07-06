@@ -1,15 +1,20 @@
 import { LanguageSelectBtn } from '../LanguageSelect.styled';
 import sprite from '../../../assets/images/sprite.svg';
+import { setLanguage } from '../../../redux/language/languageSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
-export function UkrButton({ click, argument, setShowList }) {
+export function UkrButton({ argument, setShowList }) {
+  const isEnglish = useSelector(state => state.language.isEnglish);
+  const dispatch = useDispatch();
+
   const onButtonClick = () => {
-    click(argument);
-    window.localStorage.setItem('language', argument);
+    setShowList(argument);
 
-    if (setShowList) {
-      setShowList(false);
-      window.localStorage.setItem('language', argument);
+    if (!isEnglish) {
+      return;
     }
+
+    dispatch(setLanguage(false));
   };
 
   return (
@@ -22,14 +27,18 @@ export function UkrButton({ click, argument, setShowList }) {
   );
 }
 
-export function EngButton({ click, argument, setShowList }) {
-  const onButtonClick = () => {
-    click(argument);
+export function EngButton({ argument, setShowList }) {
+  const isEnglish = useSelector(state => state.language.isEnglish);
+  const dispatch = useDispatch();
 
-    if (setShowList) {
-      setShowList(false);
-      window.localStorage.setItem('language', argument);
+  const onButtonClick = () => {
+    setShowList(argument);
+
+    if (isEnglish) {
+      return;
     }
+
+    dispatch(setLanguage(true));
   };
   return (
     <LanguageSelectBtn onClick={onButtonClick}>

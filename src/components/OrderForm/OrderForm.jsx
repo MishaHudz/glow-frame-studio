@@ -14,14 +14,14 @@ import {
 } from './OrderForm.styled';
 import { basicSchema } from 'schemas';
 import InputMask from 'react-input-mask';
-import { useContext } from 'react';
-import { MyContext } from 'сontext/context';
+import { useSelector } from 'react-redux';
+
 import { languageSelect } from 'helpers/languageSelect';
 import PreviewImage from 'components/PreviewImage/PreviewImage';
 import sprite from '../../assets/images/sprite.svg';
 
 function OrderForm() {
-  const { isEnglish } = useContext(MyContext);
+  const isEnglish = useSelector(state => state.language.isEnglish);
 
   const onFormSubmit = (values, { resetForm }) => {
     console.log(values);

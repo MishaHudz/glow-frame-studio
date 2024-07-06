@@ -1,12 +1,11 @@
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { MyContext } from 'сontext/context';
 
 import { languageSelect } from 'helpers/languageSelect';
 import { HeadNavigationList } from './NavigationList.styled';
 
 function NavigationList({ onCloseButtonClick = () => {} }) {
-  const { isEnglish } = useContext(MyContext);
+  const isEnglish = useSelector(state => state.language.isEnglish);
 
   const navigate = useNavigate();
 

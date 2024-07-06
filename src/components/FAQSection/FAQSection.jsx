@@ -1,13 +1,12 @@
+import { useSelector } from 'react-redux';
 import { SectContainer } from 'components/BenefitsSection/BenefitsSection.styled';
 import { FAQSList, FAQSect } from './FAQSection.styled';
 import FAQListItem from 'components/FAQListItem/FAQListItem';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
-import { useContext } from 'react';
-import { MyContext } from 'сontext/context';
 import { languageSelect } from 'helpers/languageSelect';
 
 function FAQSection() {
-  const { isEnglish } = useContext(MyContext);
+  const isEnglish = useSelector(state => state.language.isEnglish);
   const QuestionsList = [
     {
       question: languageSelect(isEnglish).FAQSection.question1,

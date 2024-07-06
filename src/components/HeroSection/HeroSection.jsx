@@ -1,4 +1,5 @@
 import { SectContainer } from 'components/BenefitsSection/BenefitsSection.styled';
+import { useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
 import {
   HeroSect,
@@ -10,11 +11,9 @@ import {
 import Model3D from 'components/Model3D/Model3D';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import { languageSelect } from 'helpers/languageSelect';
-import { useContext } from 'react';
-import { MyContext } from 'сontext/context';
 
 function HeroSection() {
-  const { isEnglish } = useContext(MyContext);
+  const isEnglish = useSelector(state => state.language.isEnglish);
   const isTabletScreen = useMediaQuery({ minWidth: 768 });
 
   return (
